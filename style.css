@@ -1,3 +1,10 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
 
 tr {
   width: 399px;
@@ -45,4 +52,43 @@ table tr td:last-child {
 
 .d-none {
   display: none;
+}
+
+.player-panel {
+  display: flex;
+  font-size: 32px;
+}
+
+.player-panel img {
+  height: 60px;
+  width: 60px;
+  margin-right: 16px;
+}
+
+.player-panel div {
+  display: flex;
+  align-items: center;
+  margin-right: 16px;
+  margin-left: 16px;
+  margin-bottom: 32px;
+}
+
+.player-inactive {
+  opacity: 0.5;
+}
+
+.horizontal-line {
+  height: 10px;
+  background-color: rgba(0,0,0,0.7);
+  width: 340px;
+  border-radius: 10px;
+  position: absolute;
+  transform: scaleX(0.0);
+  transform: scaleY(0.0);
+  transition: transform 225ms ease-in-out;
+}
+
+.make-vertikal {
+  transform: rotate(90deg) scaleX(0.0);
+  top: 517px;
 }
