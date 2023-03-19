@@ -51,7 +51,7 @@ table tr td:last-child {
 }
 
 .d-none {
-  display: none;
+  display: none !important;
 }
 
 .player-panel {
@@ -86,9 +86,96 @@ table tr td:last-child {
   transform: scaleX(0.0);
   transform: scaleY(0.0);
   transition: transform 225ms ease-in-out;
+  z-index: 1;
 }
 
 .make-vertikal {
   transform: rotate(90deg) scaleX(0.0);
-  top: 517px;
+  transition: transform 225ms ease-in-out;
+  top: 203px;
+  z-index: 1;
+}
+
+.game-over {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  animation: zoomIn 550ms ease-in-out;
+}
+
+@keyframes zoomIn {
+  from{
+    opacity: 0;
+    transform: scale(0);
+  }
+  to{
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.restart-btn {
+  border: 1px solid rgba(0,0,0,0.5);
+  background-color: #1C0B7F;
+  z-index: 2;
+  width: 300px;
+  height: 100px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 60px;
+  animation: zoomIn 550ms ease-in-out;
+}
+
+.restart-btn:hover {
+  background-color: #3620b3;
+}
+
+.position-relative {
+  position: relative;
+}
+
+.player-one {
+  border: 1px solid rgba(0,0,0,0.5);
+  background-color: lightskyblue;
+  z-index: 3;
+  width: 300px;
+  height: 100px;
+  color: black;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  animation: zoomIn 550ms ease-in-out;
+}
+
+.player-two {
+  border: 1px solid rgba(0,0,0,0.5);
+  background-color: yellow;
+  z-index: 3;
+  width: 300px;
+  height: 100px;
+  color: black;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  animation: zoomIn 550ms ease-in-out;
+}
+
+.megadraw {
+  border: 1px solid rgba(0,0,0,0.5);
+  background-color: red;
+  z-index: 2;
+  width: 300px;
+  height: 100px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+  position: absolute;
+  top: 60px;
+  animation: zoomIn 550ms ease-in-out;
 }
